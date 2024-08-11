@@ -27,7 +27,7 @@ class Application extends ConsoleApplication {
    *
    * @{inheritdoc}
    */
-  protected function doRunCommand(Command $command, InputInterface $input, OutputInterface $output) {
+  protected function doRunCommand(Command $command, InputInterface $input, OutputInterface $output): int {
     $exit_code = parent::doRunCommand($command, $input, $output);
 
     // If we disabled a command, do not consider it a failure.
